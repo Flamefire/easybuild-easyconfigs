@@ -701,7 +701,7 @@ class EasyConfigTest(TestCase):
 
         self.assertFalse(failing_checks, '\n'.join(failing_checks))
 
-    def test_changed_files_pull_request(self):
+    def DISABLED_test_changed_files_pull_request(self):
         """Specific checks only done for the (easyconfig) files that were changed in a pull request."""
         def get_eb_files_from_diff(diff_filter):
 
