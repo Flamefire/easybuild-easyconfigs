@@ -28,7 +28,7 @@ checksums = [
 ]
 
 postinstallcmds = [
-    'sed -i -e "s|setenv[[:space:]]NMHOME.*|setenv NMHOME \$EBROOTNETMHC|" %(installdir)s/netMHC',
+    r'sed -i -e "s|setenv[[:space:]]NMHOME.*|setenv NMHOME \$EBROOTNETMHC|" %(installdir)s/netMHC',
     'sed -i -e "s|setenv[[:space:]]TMPDIR.*|setenv TMPDIR /tmp|" %(installdir)s/netMHC',
 ]
 
