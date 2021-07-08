@@ -13,6 +13,7 @@ toolchainopts = {'pic': True}
 
 source_urls = ['https://github.com/PointCloudLibrary/pcl/archive/']
 sources = [SOURCELOWER_TAR_GZ]
+checksums = ['479f84f2c658a6319b78271111251b4c2d6cf07643421b66bbc351d9bed0ae93']
 
 builddependencies = [('CMake', '3.5.2')]
 dependencies = [

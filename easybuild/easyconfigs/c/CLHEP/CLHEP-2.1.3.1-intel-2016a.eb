@@ -11,8 +11,9 @@ description = """The CLHEP project is intended to be a set of HEP-specific found
 toolchain = {'name': 'intel', 'version': '2016a'}
 toolchainopts = {'pic': True}
 
-sources = [SOURCELOWER_TGZ]
 source_urls = ['http://proj-clhep.web.cern.ch/proj-clhep/DISTRIBUTION/tarFiles/']
+sources = [SOURCELOWER_TGZ]
+checksums = ['5d3e45b39a861731fe3a532bb1426353bf62b54c7b90ecf268827e50f925642b']
 
 builddependencies = [('CMake', '3.4.3')]
 

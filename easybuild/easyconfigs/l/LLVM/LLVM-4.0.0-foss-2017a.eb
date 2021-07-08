@@ -17,6 +17,7 @@ toolchainopts = {'cstd': 'gnu++11'}
 
 source_urls = ["http://llvm.org/releases/%(version)s"]
 sources = ["llvm-%(version)s.src.tar.xz"]
+checksums = ['8d10511df96e73b8ff9e7abbfb4d4d432edbdbe965f1f4f07afaf370b8a533be']
 
 builddependencies = [
     ('CMake', '3.7.2'),
