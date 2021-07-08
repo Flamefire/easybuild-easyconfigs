@@ -22,7 +22,7 @@ dependencies = [
 builddependencies = [('CMake', '3.9.5')]
 
 preconfigopts = "ZLIB_HOME=$EBROOTZLIB"
-configopts = "-DARROW_PYTHON=ON -DARROW_PLASMA=ON -DARROW_BUILD_TESTS=ON -DCMAKE_BUILD_TYPE=Release"
+configopts = "-DARROW_PYTHON=ON -DARROW_PLASMA=ON -DARROW_BUILD_TESTS=ON"
 
 start_dir = 'cpp'
 separate_build_dir = True

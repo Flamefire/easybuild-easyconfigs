@@ -17,7 +17,6 @@ dependencies = [('zlib', '1.2.11')]
 builddependencies = [('CMake', '3.7.2')]
 
 separate_build_dir = True
-configopts = '-DCMAKE_BUILD_TYPE=release'
 
 parallel = 1
 

@@ -19,6 +19,5 @@ builddependencies = [('CMake', '3.10.0')]
 
 separate_build_dir = True
 
-configopts = '-DCMAKE_BUILD_TYPE=Release'
 
 moduleclass = 'numlib'

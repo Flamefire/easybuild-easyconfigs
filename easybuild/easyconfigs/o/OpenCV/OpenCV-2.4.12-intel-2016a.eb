@@ -36,8 +36,7 @@ dependencies = [
 
 preconfigopts = 'export IPPROOT=$EBROOTICC/ipp && '
 
-configopts = '-DCMAKE_BUILD_TYPE=RELEASE '
-configopts += '-DBUILD_PYTHON_SUPPORT=ON '
+configopts = '-DBUILD_PYTHON_SUPPORT=ON '
 configopts += '-DPYTHON_PACKAGES_PATH=%(installdir)s/lib/python%(pyshortver)s/site-packages '
 configopts += '-DBUILD_NEW_PYTHON_SUPPORT=ON '
 configopts += '-DZLIB_LIBRARY=$EBROOTZLIB/lib/libz.so '

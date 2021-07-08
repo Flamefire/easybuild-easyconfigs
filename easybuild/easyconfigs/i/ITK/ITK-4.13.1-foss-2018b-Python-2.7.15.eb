@@ -30,7 +30,7 @@ dependencies = [
     ('X11', '20180604')
 ]
 
-configopts = '-DCMAKE_BUILD_TYPE=Release -DITK_WRAP_PYTHON=ON '
+configopts = '-DITK_WRAP_PYTHON=ON '
 configopts += '-DBUILD_TESTING=OFF -DITK_USE_SYSTEM_SWIG=ON '
 configopts += '-DModule_ITKReview=ON -DModule_ITKVtkGlue=ON '
 

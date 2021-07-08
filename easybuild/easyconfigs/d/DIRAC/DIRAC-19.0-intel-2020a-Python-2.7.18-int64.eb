@@ -32,8 +32,7 @@ dependencies = [('Python', '2.7.18')]
 
 separate_build_dir = True
 
-configopts = '-DCMAKE_BUILD_TYPE=RELEASE '
-configopts += '-DENABLE_BLAS=off '
+configopts = '-DENABLE_BLAS=off '
 configopts += '-DENABLE_LAPACK=off '
 configopts += '-DMKL_FLAG=off '
 configopts += '-DBLAS_LANG=Fortran '

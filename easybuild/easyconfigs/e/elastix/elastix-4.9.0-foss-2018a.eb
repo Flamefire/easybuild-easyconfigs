@@ -19,8 +19,6 @@ dependencies = [
     ('ITK', '4.13.0', '-Python-2.7.14'),
 ]
 
-configopts = '-DCMAKE_BUILD_TYPE=Release '
-
 separate_build_dir = True
 
 sanity_check_paths = {
