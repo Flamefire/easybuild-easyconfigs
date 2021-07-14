@@ -50,6 +50,9 @@ local_sys_deps = ['EIGEN', 'HDF5', 'JPEG', 'PNG', 'TIFF', 'SWIG', 'ZLIB']
 local_sys_cmake = ['-DITK_USE_SYSTEM_%s=ON' % d for d in local_sys_deps]
 
 preconfigopts = 'Eigen3_DIR=$EBROOTEIGEN '
+# Don't depend on MPICXX (which makes linking to ITK painful)
+preconfigopts += 'CXXFLAGS="$CXXFLAGS -DOMPI_SKIP_MPICXX" '
+
 configopts = '-DBUILD_SHARED_LIBS=ON -DBUILD_TESTING=OFF '
 configopts += '-DITK_WRAP_PYTHON=ON -DITK_LEGACY_SILENT=ON '
 configopts += '-DModule_ITKReview=ON -DModule_ITKVtkGlue=ON '

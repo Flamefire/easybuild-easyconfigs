@@ -37,6 +37,9 @@ dependencies = [
 local_sys_deps = ['HDF5', 'SWIG']
 local_sys_cmake = ['-DITK_USE_SYSTEM_%s=ON' % d for d in local_sys_deps]
 
+# Don't depend on MPICXX (which makes linking to ITK painful)
+preconfigopts = 'CXXFLAGS="$CXXFLAGS -DOMPI_SKIP_MPICXX" '
+
 configopts = '-DITK_WRAP_PYTHON=ON '
 configopts += '-DBUILD_TESTING=OFF '
 configopts += '-DModule_ITKReview=ON -DModule_ITKVtkGlue=ON '
