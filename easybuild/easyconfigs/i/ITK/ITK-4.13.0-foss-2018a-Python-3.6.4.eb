@@ -15,7 +15,10 @@ toolchainopts = {'pic': True}
 source_urls = ['https://github.com/InsightSoftwareConsortium/ITK/archive/']
 sources = ['v%(version)s.tar.gz']
 patches = ['ITK-4.12.2_update-download-URLs.patch']
-checksums = ['37122d65b89699df33f34e0859f1e7adf5a6222060dc1c47383ff7aa4531223a']
+checksums = [
+    '37122d65b89699df33f34e0859f1e7adf5a6222060dc1c47383ff7aa4531223a',  # v4.13.0.tar.gz
+    'a05c883634077de177af09f166bad7cfcd73bfebec671394299a08a55e109bc0',  # ITK-4.12.2_update-download-URLs.patch
+]
 
 builddependencies = [
     ('CMake', '3.10.2'),

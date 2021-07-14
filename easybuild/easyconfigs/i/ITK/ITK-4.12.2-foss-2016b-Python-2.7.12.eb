@@ -15,7 +15,10 @@ toolchainopts = {'pic': True}
 source_urls = ['https://github.com/InsightSoftwareConsortium/ITK/releases/download/v%(version)s/']
 sources = ['InsightToolkit-%(version)s.tar.gz']
 patches = ['ITK-4.12.2_update-download-URLs.patch']
-checksums = ['8ba2183111723c4405af80724c60d07484c2bff8120ee4cef543bb726d07855e']
+checksums = [
+    '8ba2183111723c4405af80724c60d07484c2bff8120ee4cef543bb726d07855e',  # InsightToolkit-4.12.2.tar.gz
+    'a05c883634077de177af09f166bad7cfcd73bfebec671394299a08a55e109bc0',  # ITK-4.12.2_update-download-URLs.patch
+]
 
 builddependencies = [
     ('CMake', '3.7.1'),
