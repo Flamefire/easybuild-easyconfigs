@@ -36,7 +36,6 @@ start_dir = 'cpp'
 
 # see https://arrow.apache.org/docs/python/development.html
 configopts = "-DARROW_PYTHON=on -DARROW_PARQUET=ON -DARROW_WITH_SNAPPY=ON "
-configopts += "-DARROW_DEPENDENCY_SOURCE=SYSTEM "
 configopts += "-DCMAKE_INSTALL_LIBDIR=lib -DPython3_ROOT_DIR=$EBROOTPYTHON"
 
 # also install Python bindings
