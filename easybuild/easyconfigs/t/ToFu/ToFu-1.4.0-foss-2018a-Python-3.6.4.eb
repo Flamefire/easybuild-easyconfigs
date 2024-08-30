@@ -15,8 +15,7 @@ dependencies = [
 ]
 
 use_pip = True
-
-exts_default_options = {'source_urls': [PYPI_LOWER_SOURCE]}
+sanity_pip_check = True
 
 exts_list = [
     ('docutils', '0.14', {
