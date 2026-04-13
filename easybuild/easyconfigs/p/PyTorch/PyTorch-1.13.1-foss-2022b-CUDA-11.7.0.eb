@@ -41,7 +41,6 @@ dependencies = [
     ('expecttest', '0.1.3'),
 ]
 
-local_libcaffe2 = "$EBROOTPYTORCH/lib/python%%(pyshortver)s/site-packages/torch/lib/libcaffe2_nvrtc.%s" % SHLIB_EXT
 
 exts_list = [
     ('torch', version, {
@@ -188,16 +187,17 @@ exts_list = [
                 'distributed/rpc/cuda/test_tensorpipe_agent',
             ]
         },
-        'runtest': 'cd test && PYTHONUNBUFFERED=1 %(python)s run_test.py --continue-through-error  --verbose %(excluded_tests)s'
-
-        # The readelf sanity check command can be taken out once the TestRPATH test from
-        # https://github.com/pytorch/pytorch/pull/87593 is accepted, since it is then checked as part of the PyTorch test suite,
-        'sanity_check_commands': [
-            "readelf -d %s | egrep 'RPATH|RUNPATH' | grep -v stubs" % local_libcaffe2,
-        ],
-        'tests': ['PyTorch-check-cpp-extension.py'],
-    }
-),
+        'runtest': 'cd test && PYTHONUNBUFFERED=1 %(python)s run_test.py --continue-through-error  --verbose %(excluded_tests)s',
+    }),
 ]
+
+# The readelf sanity check command can be taken out once the TestRPATH test from
+# https://github.com/pytorch/pytorch/pull/87593 is accepted, since it is then checked as part of the PyTorch test suite
+local_libcaffe2 = "$EBROOTPYTORCH/lib/python%%(pyshortver)s/site-packages/torch/lib/libcaffe2_nvrtc.%s" % SHLIB_EXT
+sanity_check_commands = [
+    "readelf -d %s | egrep 'RPATH|RUNPATH' | grep -v stubs" % local_libcaffe2,
+]
+
+tests = ['PyTorch-check-cpp-extension.py']
 
 moduleclass = 'ai'
